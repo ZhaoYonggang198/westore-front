@@ -48,7 +48,7 @@
       <span style="font-weight: bold;">商品描述</span>
 
     </b-row>
-    <b-row>
+    <b-row class="detail">
        {{product.description}}
     </b-row>
     <hr>
@@ -57,7 +57,7 @@
 
     </b-row>
 
-    <b-row>
+    <b-row class="detail">
        {{product.transport.description}}
     </b-row>
     <hr>
@@ -112,8 +112,18 @@ h1, h2 {
 }
 
 .quantity{
-  font-size:10px;
+  font-size:13px;
   padding: 0px;
+
+}
+
+.quantity td{
+  padding: 0px;
+}
+
+.detail{
+  text-align: left;
+  font-size: small;
 }
 
 .quantity-size{
