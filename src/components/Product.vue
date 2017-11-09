@@ -70,10 +70,10 @@
       <span style="font-weight: bold;">产品图片</span>
 
     </b-row>
-    <b-row v-for="picture in product.pictures">
-      <b-img fluid :src="picture.uri">
+    
+      <b-img v-for="picture in product.pictures" fluid-grow :src="picture.uri">
       </b-img>
-    </b-row>
+    
   </b-container>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2>INTRAMIRROR</h2>
+    <h2><router-link to="/">INTRAMIRROR</router-link></h2>
     <router-view/>
   </div>
 </template>

@@ -9,7 +9,7 @@
           <router-link :to="'/product/' + products[key+1].id"><b-img :src="products[key+1].pictures[0].uri" fluid :alt="products[key+1].description" ></b-img></router-link>
         </b-col>
       </b-row>
-      <b-row>
+      <b-row style="margin: 20px">
         <b-col cols="6"  >
           <span>{{ product.brandName }}</span>
         </b-col>
@@ -22,12 +22,12 @@
           <span><S>€{{product.price}}</S></span>  <span style="font-weight: bold">{{(product.discount*10).toFixed(1)}}折</span>&nbsp;&nbsp;&nbsp;<span>€{{(product.price*product.discount).toFixed(1)}}</span>
         </b-col>
         <b-col cols="6" v-if="key+1 < products.length">
-          <span><S>€{{products[key+1].price}}</S></span>  <span style="font-weight: bold">{{(products[key+1].discount*10).toFixed(1)}}折</span>&nbsp;&nbsp;&nbsp;<span>€{{(products[key+1].price*products[key+1].discount).toFixed(1)}}</span>
+          <span><S>€{{products[key+1].price}}</S></span>  <span style="font-weight: bold">{{(products[key+1].discount*10).toFixed(1)}}折</span>&nbsp;&nbsp;&nbsp;<span style="font-weight:bold">€{{(products[key+1].price*products[key+1].discount).toFixed(1)}}</span>
         </b-col>
       </b-row>
-      <b-row>
+      <b-row style="margin-bottom: 20px">
         <b-col cols="6"  >
-          <table class="table-sm table-bordered quantity" style="margin:  0px auto">
+          <table class="table-sm table-bordered quantity" style="">
             <tbody>
               <tr>
                 <td v-for="(quantity, size) in product.quantity">
@@ -43,7 +43,7 @@
            </table>
         </b-col>
         <b-col cols="6" v-if="key+1 < products.length">
-          <table class="table-sm table-bordered quantity" style="margin:  0px auto">
+          <table class="table-sm table-bordered quantity">
             <tbody>
               <tr>
                 <td v-for="(quantity, size) in products[key+1].quantity">
@@ -100,6 +100,11 @@ h1, h2 {
 
 .quantity{
   font-size:10px;
+  padding: 0px;
+  margin:  0px auto
+}
+
+.quantity td{
   padding: 0px;
 }
 
